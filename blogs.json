@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Web Development",
+    "description": "Learn the basics of HTML, CSS, and JavaScript for beginners.",
+    "category": "Frontend",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "image": "images/webdev.jpeg",
+    "content": "<p>Web development starts with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. Together, they help you build responsive and interactive websites.</p>"
+  },
+  {
+    "id": 2,
+    "title": "Getting Started with AWS",
+    "description": "Explore how to deploy and manage applications using AWS.",
+    "category": "Cloud",
+    "tags": ["AWS", "Cloud", "EC2"],
+    "image": "images/aws.png",
+    "content": "<p>AWS provides services like <strong>EC2</strong>, <strong>S3</strong>, and <strong>RDS</strong> to build and scale applications.</p>"
+  },
+  {
+    "id": 3,
+    "title": "JavaScript Best Practices",
+    "description": "Tips and tricks for writing clean and efficient JavaScript code.",
+    "category": "Frontend",
+    "tags": ["JavaScript", "Coding", "Tips"],
+    "image": "images/js.png",
+    "content": "<p>Use ES6+ features, modular functions, and consistent naming conventions for clean JS code.</p>"
+  },
+  {
+    "id": 4,
+    "title": "Data Science Basics",
+    "description": "Understand data analysis, visualization, and preprocessing techniques.",
+    "category": "AI",
+    "tags": ["Pandas", "NumPy", "Visualization"],
+    "image": "images/data science.jpeg",
+    "content": "<p>Data Science uses libraries like Pandas, NumPy, and Matplotlib to explore and visualize data.</p>"
+  },
+  {
+    "id": 5,
+    "title": "Machine Learning 101",
+    "description": "Supervised vs Unsupervised learning explained with examples.",
+    "category": "AI",
+    "tags": ["ML", "Algorithms", "Models"],
+    "image": "images/ml.jpeg",
+    "content": "<p>Supervised learning works with labeled data, while unsupervised learning identifies patterns in raw datasets.</p>"
+  },
+  {
+    "id": 6,
+    "title": "Cybersecurity Essentials",
+    "description": "Protect yourself from phishing, malware, and cyber attacks.",
+    "category": "Security",
+    "tags": ["Security", "Encryption", "Hacking"],
+    "image": "images/cyberimage.jpeg",
+    "content": "<p>Cybersecurity keeps your systems safe with encryption, authentication, and monitoring tools.</p>"
+  },
+  {
+    "id": 7,
+    "title": "DevOps Practices",
+    "description": "CI/CD pipelines, Docker, and Kubernetes basics.",
+    "category": "Cloud",
+    "tags": ["DevOps", "Docker", "Kubernetes"],
+    "image": "images/devops.jpeg",
+    "content": "<p>DevOps automates software delivery with tools like Jenkins, Docker, and Kubernetes.</p>"
+  },
+  {
+    "id": 8,
+    "title": "AI in Daily Life",
+    "description": "Applications of AI in healthcare, finance, and automation.",
+    "category": "AI",
+    "tags": ["AI", "Automation", "Neural Networks"],
+    "image": "images/ai.jpeg",
+    "content": "<p>AI powers voice assistants, fraud detection, recommendation engines, and automation.</p>"
+  },
+  {
+    "id": 9,
+    "title": "Introduction to Databases",
+    "description": "Learn SQL and NoSQL database fundamentals.",
+    "category": "Database",
+    "tags": ["SQL", "NoSQL", "Database"],
+    "image": "images/db.jpeg",
+    "content": "<p>SQL databases are structured, while NoSQL provides flexibility for unstructured data.</p>"
+  },
+  {
+    "id": 10,
+    "title": "Building REST APIs",
+    "description": "A step-by-step guide to designing RESTful APIs.",
+    "category": "Backend",
+    "tags": ["API", "Node.js", "Express"],
+    "image": "images/rsapi.jpeg",
+    "content": "<p>REST APIs use HTTP methods like GET, POST, PUT, and DELETE to exchange data.</p>"
+  },
+  {
+    "id": 11,
+    "title": "Cloud Security Fundamentals",
+    "description": "Best practices for securing cloud infrastructure.",
+    "category": "Security",
+    "tags": ["Cloud Security", "IAM", "Firewalls"],
+    "image": "images/cloud.jpeg",
+    "content": "<p>Cloud security practices include IAM, firewalls, encryption, and monitoring tools.</p>"
+  },
+  {
+    "id": 12,
+    "title": "Version Control with Git",
+    "description": "Collaborate efficiently using Git and GitHub.",
+    "category": "Tools",
+    "tags": ["Git", "GitHub", "Collaboration"],
+    "image": "images/git.png",
+    "content": "<p>Git tracks source code changes, while GitHub enables collaboration and CI/CD.</p>"
+  },
+  {
+    "id": 13,
+    "title": "Responsive Web Design",
+    "description": "Make websites look great on all devices.",
+    "category": "Frontend",
+    "tags": ["CSS", "Responsive", "Design"],
+    "image": "images/wedesign.jpeg",
+    "content": "<p>Responsive design uses media queries, flexible layouts, and grids for multi-device support.</p>"
+  },
+  {
+    "id": 14,
+    "title": "Natural Language Processing",
+    "description": "Understand the basics of NLP and text analysis.",
+    "category": "AI",
+    "tags": ["NLP", "Text Mining", "AI"],
+    "image": "images/nlp.jpeg",
+    "content": "<p>NLP powers sentiment analysis, chatbots, and translation systems.</p>"
+  },
+  {
+    "id": 15,
+    "title": "Introduction to Docker",
+    "description": "Learn containerization with Docker basics.",
+    "category": "DevOps",
+    "tags": ["Docker", "Containers", "DevOps"],
+    "image": "images/docker.png",
+    "content": "<p>Docker lets you package applications into containers, ensuring consistency across environments.</p>"
+  },
+  {
+    "id": 16,
+    "title": "Kubernetes for Beginners",
+    "description": "Learn how to orchestrate containers using Kubernetes.",
+    "category": "DevOps",
+    "tags": ["Kubernetes", "Orchestration", "DevOps"],
+    "image": "images/kuber.png",
+    "content": "<p>Kubernetes automates deployment, scaling, and management of containerized applications.</p>"
+
+  }
+]
