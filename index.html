@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,3 +117,123 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Listing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {font-family: "Poppins", sans-serif; margin:0; background:#f5f7fa;}
+    header {background:#2c3e50; color:#fff; text-align:center; padding:40px 20px;}
+    header h1 {margin:0; font-size:2em;}
+    .container {max-width:1200px; margin:auto; padding:30px 20px;}
+    .search-bar {display:flex; justify-content:center; gap:10px; margin-bottom:30px; flex-wrap:wrap;}
+    .search-bar input,.search-bar select {padding:10px; border:1px solid #ddd; border-radius:6px; min-width:200px;}
+    .grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;}
+    .card {
+      background:#fff; border-radius:10px; overflow:hidden; 
+      box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {transform:translateY(-5px); box-shadow:0 4px 16px rgba(0,0,0,0.15);}
+    .card img {width:100%; height:180px; object-fit:cover;}
+    .card-body {padding:15px;}
+    .card h3 {margin:0 0 10px; font-size:1.2em; color:#2c3e50;}
+    .card p {font-size:0.9em; color:#555;}
+    .meta {font-size:0.8em; color:#888; margin-bottom:8px;}
+    .category {font-size:0.85em; color:#16a085; margin:6px 0;}
+    .tags .tag {
+      display:inline-block; background:#ecf0f1; color:#2c3e50; 
+      padding:4px 8px; margin:2px; border-radius:4px; font-size:0.75em;
+    }
+    .btn {
+      display:inline-block; margin-top:10px; padding:8px 12px; 
+      background:#16a085; color:#fff; text-decoration:none; border-radius:4px; font-size:0.85em;
+    }
+    .btn:hover {background:#12876f;}
+    .no-results {text-align:center; color:#888; font-size:1.1em; margin-top:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <p>Explore latest tech articles</p>
+  </header>
+
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search blogs...">
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Cloud">Cloud</option>
+        <option value="AI">AI</option>
+        <option value="Security">Security</option>
+      </select>
+    </div>
+
+    <div class="grid" id="blog-list"></div>
+    <div id="noResults" class="no-results" style="display:none;">⚠️ No blogs found!</div>
+  </div>
+
+  <script>
+    let blogsData = [];
+    async function loadBlogs() {
+      try {
+        const res = await fetch("blogs.json");
+        blogsData = await res.json();
+        displayBlogs(blogsData);
+      } catch (err) {
+        console.error("Error loading blogs.json", err);
+      }
+    }
+
+    function displayBlogs(blogs) {
+      const container = document.getElementById("blog-list");
+      const noResults = document.getElementById("noResults");
+      container.innerHTML = "";
+
+      if (blogs.length === 0) {
+        noResults.style.display = "block";
+        return;
+      } else {
+        noResults.style.display = "none";
+      }
+
+      blogs.forEach(blog => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          ${blog.image ? `<img src="${blog.image}" alt="${blog.title}">` : ""}
+          <div class="card-body">
+            <h3>${blog.title}</h3>
+            
+            <p>${blog.description.length > 100 ? blog.description.substring(0,100) + "..." : blog.description}</p>
+            <p class="category">Category: ${blog.category}</p>
+            <div class="tags">${blog.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+            <a href="blog.html?id=${blog.id}" class="btn">Read More</a>
+          </div>`;
+        container.appendChild(card);
+      });
+    }
+
+    function filterBlogs() {
+      const s = document.getElementById("searchInput").value.toLowerCase();
+      const c = document.getElementById("categoryFilter").value;
+      const filtered = blogsData.filter(b =>
+        (b.title.toLowerCase().includes(s) || b.description.toLowerCase().includes(s)) &&
+        (c === "All" || b.category === c)
+      );
+      displayBlogs(filtered);
+    }
+
+    document.getElementById("searchInput").addEventListener("input", filterBlogs);
+    document.getElementById("categoryFilter").addEventListener("change", filterBlogs);
+
+    loadBlogs();
+  </script>
+</body>
+</html>
+>>>>>>> 8c9d55229c7a0377d104e2549f40b91be105e981
